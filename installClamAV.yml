@@ -7,3 +7,4 @@
   - name: "Install ClamAV"
     apt:
       name: "clamav"
+    become: yes
