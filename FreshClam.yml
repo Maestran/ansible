@@ -1,0 +1,9 @@
+---
+
+- hosts: all
+  remote_user: ansible
+
+  tasks:
+  - name: "Update Freshclam"
+    shell: sudo systemctl stop clamav-freshclam.service && sudo freshclam && sudo systemctl start clamav-freshclam.service
+    
