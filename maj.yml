@@ -8,14 +8,10 @@
     apt:
       name: "*"
       state: latest
+    become: yes
     when: ansible_facts['os_family'] == "Debian"
 
-  tasks:
-  - name: "Update all ubuntu"
-    apt:
-      name: "*"
-      state: latest
-    when: ansible_facts['os_family'] == "Ubuntu"
+
 
 
 #  tasks:
