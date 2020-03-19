@@ -1,0 +1,9 @@
+---
+
+- hosts: all
+  remote_user: ansible
+
+  tasks:
+  - name: "Install ClamAV"
+    apt:
+      name: "clamav"
