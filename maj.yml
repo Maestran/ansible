@@ -1,18 +1,19 @@
 ---
 
 - hosts: all
+  remote_user: ansible
 
-tasks:
+  tasks:
   - name: "Update all debian"
     command: sudo apt update && sudo apt upgrade -y
     when: ansible_facts['os_family'] == "Debian"
 
-tasks:
+  tasks:
   - name: "Update all ubuntu"
     command: sudo apt update && sudo apt upgrade -y
     when: ansible_facts['os_family'] == "Ubuntu"
 
-tasks:
+  tasks:
   - name: "Update all Centos"
     command: sudo yum update && sudo yum upgrade -y
     when: ansible_facts['os_family'] == "Centos"
