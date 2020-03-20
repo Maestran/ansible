@@ -1,0 +1,10 @@
+---
+
+- hosts: all
+  remote_user: ansible
+
+  tasks:
+  - name: "Force proxy Freshclam"
+    shell: echo "HTTPProxyServer 10.10.240.10" >> /etc/clamav/freshclam.conf
+    shell: echo "HTTPProxyPort 3128" >> /etc/clamav/freshclam.conf
+    become: yes    
