@@ -4,11 +4,16 @@
   remote_user: ansible
 
   tasks:
-  - name: "Force proxy Freshclam"
-    shell: echo "HTTPProxyServer 10.10.240.10" >> /etc/clamav/freshclam.conf
-    become: yes    
+  - name: "Delete two last line proxy Freshclam"
+    shell: sed '$d' /etc/clamav/freshclam.conf
+    become: yes 
+
+  #tasks:
+  #- name: "Force proxy Freshclam"
+  #  shell: echo "HTTPProxyServer 10.10.240.10" >> /etc/clamav/freshclam.conf
+  #  become: yes    
     
-  tasks:
-  - name: "Force port Freshclam"
-    shell: echo "HTTPProxyPort 3128" >> /etc/clamav/freshclam.conf
-    become: yes  
+  #tasks:
+  #- name: "Force port Freshclam"
+  #  shell: echo "HTTPProxyPort 3128" >> /etc/clamav/freshclam.conf
+  #  become: yes  
