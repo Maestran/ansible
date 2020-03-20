@@ -5,5 +5,5 @@
 
   tasks:
   - name: "Update Freshclam"
-    shell: sudo systemctl stop clamav-freshclam.service && sudo freshclam && sudo systemctl start clamav-freshclam.service
+    shell: sudo systemctl stop clamav-freshclam.service && sudo freshclam && sudo systemctl start clamav-freshclam.service && echo 'DONE'
     
