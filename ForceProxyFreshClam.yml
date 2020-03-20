@@ -5,7 +5,7 @@
 
   tasks:
   - name: "Delete two last line proxy Freshclam"
-    shell: sed '$d' /etc/clamav/freshclam.conf
+    shell: sed -i '$d' /etc/clamav/freshclam.conf
     become: yes 
 
   #tasks:
