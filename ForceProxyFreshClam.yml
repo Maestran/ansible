@@ -13,7 +13,7 @@
   #  shell: echo "HTTPProxyServer 10.10.240.10" >> /etc/clamav/freshclam.conf
   #  become: yes    
     
-   tasks:
+  tasks:
    - name: "Force port Freshclam"
      shell: echo "HTTPProxyPort 3128" >> /etc/clamav/freshclam.conf
      become: yes  
