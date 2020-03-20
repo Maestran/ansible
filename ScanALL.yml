@@ -1,0 +1,13 @@
+---
+
+- hosts: all
+  remote_user: ansible
+
+  tasks:
+  - name: "Scan ALL the disk"
+    shell: clamscan -r /
+    become: yes 
+
+
+
+
