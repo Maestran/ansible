@@ -1,0 +1,9 @@
+---
+
+- hosts: all
+  remote_user: ansible
+
+  tasks:
+  - name: "Check"
+    shell: cat /var/log/clamav/scan.log | grep "Infected files"
+    become: yes
