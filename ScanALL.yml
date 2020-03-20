@@ -5,7 +5,7 @@
 
   tasks:
   - name: "Scan ALL the disk"
-    shell: clamscan -r /
+    shell: clamscan -i -r /etc --exclude-dir="^/sys" --log=/var/log/clamav/scan.log
     become: yes 
 
 
