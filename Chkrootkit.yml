@@ -7,8 +7,6 @@
   - name: "Launch chkrootkit"
     shell: chkrootkit -q > /var/log/scan.log
     become: yes 
-
-  tasks:
   - name: "Show scan result"
     shell: cat /var/log/scan.log
     become: yes 
