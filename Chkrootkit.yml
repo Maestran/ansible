@@ -1,0 +1,9 @@
+---
+
+- hosts: all
+  remote_user: ansible
+
+  tasks:
+  - name: "Launch chkrootkit"
+    shell: chkrootkit -q
+    become: yes 
