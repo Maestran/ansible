@@ -1,0 +1,11 @@
+---
+
+- hosts: all
+  remote_user: ansible
+
+  tasks:
+  - name: "Install ChkRootKit"
+    apt:
+      name: "chkrootkit"
+    become: yes
+  
